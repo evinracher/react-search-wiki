@@ -1,33 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import ReactAutocomplete from 'react-autocomplete';
 import axios from 'axios';
+import { useSearch } from './hooks';
 
 function App() {
   const [value, setValue] = useState('');
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    axios.get(`https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&search=${value}`)
-      .then(function (response) {
-        const parseResponse = [];
-        for(let i = 0; i < response.data[1].length; i++) {
-          parseResponse.push({
-            id: response.data[3][i],
-            label: response.data[1][i]
-          });
-        }
-
-        setItems(parseResponse);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-  }, [value]);
+  const { articles, status, error } = useSearch(value);
 
   return (
     <ReactAutocomplete
-      items={items}
+      items={articles}
       shouldItemRender={(item, value) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1}
       getItemValue={item => item.label}
       renderItem={(item, highlighted) =>
