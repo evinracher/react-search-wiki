@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactAutocomplete from 'react-autocomplete';
-import axios from 'axios';
-import { useSearch } from './hooks';
+import { useSearch, useDebounce } from './hooks';
 
 function App() {
   const [value, setValue] = useState('');
-  const { articles, status, error } = useSearch(value);
+  const { articles } = useSearch(useDebounce(value, 500));
 
   return (
     <ReactAutocomplete

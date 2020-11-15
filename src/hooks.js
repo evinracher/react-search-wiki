@@ -60,3 +60,21 @@ export const useSearch = (query) => {
 
   return state;
 };
+
+export const useDebounce = (value, delay = 500) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedValue(value);
+      console.log('Putting it', value);
+    }, delay);
+
+    return () => {
+      // Clear the timeout if value change
+      clearTimeout(timer);
+    }
+  }, [value, delay]);
+
+  return debouncedValue;
+};
