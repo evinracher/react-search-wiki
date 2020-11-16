@@ -1,0 +1,11 @@
+.home-page-container {
+    text-align: center;
+    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        max-width: 25rem;
+        margin-bottom: 2rem;
+    }
+}

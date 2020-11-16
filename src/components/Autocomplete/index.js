@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactAutocomplete from 'react-autocomplete';
 import Input from '../Input';
+import './styles.scss';
 
 const Autocomplete = ({ articles, searchValue, onSearchChange }) => {
   return (
@@ -25,10 +26,11 @@ const Autocomplete = ({ articles, searchValue, onSearchChange }) => {
       }
       renderItem={(item, highlighted) =>
         <div
+          className="input-suggestions-item"
           key={item.id}
           style={{ backgroundColor: highlighted ? '#eee' : 'transparent' }}
         >
-          {item.label}
+          <a className="input-suggestions-link" href={item.id} target="_blank">{item.label}</a>
         </div>
       }
       value={searchValue}
