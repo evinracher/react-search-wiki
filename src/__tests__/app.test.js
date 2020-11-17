@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 import App from '../App';
 
-const render = (initialEntries) => mount(<MemoryRouter initialEntries={initialEntries}><App /></MemoryRouter>);
+const render = (initialEntries) => mount(<MemoryRouter keyLength={0} initialEntries={initialEntries}><App /></MemoryRouter>);
 
 describe('App component', () => {
   let sut;
@@ -15,6 +15,16 @@ describe('App component', () => {
     });
 
     it('should match home page snapshot', () => {
+      expect(sut).toMatchSnapshot();
+    });
+  });
+
+  describe('when search page is rendered', () => {
+    beforeEach(() => {
+      sut = render(['/search']);
+    });
+
+    it('should match search page snapshot', () => {
       expect(sut).toMatchSnapshot();
     });
   });

@@ -7,6 +7,7 @@ exports[`App component when home page is rendered should match home page snapsho
       "/",
     ]
   }
+  keyLength={0}
 >
   <Router
     history={
@@ -18,7 +19,6 @@ exports[`App component when home page is rendered should match home page snapsho
         "entries": Array [
           Object {
             "hash": "",
-            "key": "aghtyc",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -32,7 +32,6 @@ exports[`App component when home page is rendered should match home page snapsho
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "aghtyc",
           "pathname": "/",
           "search": "",
           "state": undefined,
@@ -58,7 +57,6 @@ exports[`App component when home page is rendered should match home page snapsho
           location={
             Object {
               "hash": "",
-              "key": "aghtyc",
               "pathname": "/",
               "search": "",
               "state": undefined,
@@ -76,7 +74,6 @@ exports[`App component when home page is rendered should match home page snapsho
                 "entries": Array [
                   Object {
                     "hash": "",
-                    "key": "aghtyc",
                     "pathname": "/",
                     "search": "",
                     "state": undefined,
@@ -90,7 +87,6 @@ exports[`App component when home page is rendered should match home page snapsho
                 "listen": [Function],
                 "location": Object {
                   "hash": "",
-                  "key": "aghtyc",
                   "pathname": "/",
                   "search": "",
                   "state": undefined,
@@ -102,7 +98,6 @@ exports[`App component when home page is rendered should match home page snapsho
             location={
               Object {
                 "hash": "",
-                "key": "aghtyc",
                 "pathname": "/",
                 "search": "",
                 "state": undefined,
@@ -208,6 +203,7 @@ exports[`App component when not found page is rendered should match not found pa
       "/fadsfas",
     ]
   }
+  keyLength={0}
 >
   <Router
     history={
@@ -219,7 +215,6 @@ exports[`App component when not found page is rendered should match not found pa
         "entries": Array [
           Object {
             "hash": "",
-            "key": "yayodv",
             "pathname": "/fadsfas",
             "search": "",
             "state": undefined,
@@ -233,7 +228,6 @@ exports[`App component when not found page is rendered should match not found pa
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "yayodv",
           "pathname": "/fadsfas",
           "search": "",
           "state": undefined,
@@ -258,7 +252,6 @@ exports[`App component when not found page is rendered should match not found pa
           location={
             Object {
               "hash": "",
-              "key": "yayodv",
               "pathname": "/fadsfas",
               "search": "",
               "state": undefined,
@@ -275,7 +268,6 @@ exports[`App component when not found page is rendered should match not found pa
                 "entries": Array [
                   Object {
                     "hash": "",
-                    "key": "yayodv",
                     "pathname": "/fadsfas",
                     "search": "",
                     "state": undefined,
@@ -289,7 +281,6 @@ exports[`App component when not found page is rendered should match not found pa
                 "listen": [Function],
                 "location": Object {
                   "hash": "",
-                  "key": "yayodv",
                   "pathname": "/fadsfas",
                   "search": "",
                   "state": undefined,
@@ -301,7 +292,6 @@ exports[`App component when not found page is rendered should match not found pa
             location={
               Object {
                 "hash": "",
-                "key": "yayodv",
                 "pathname": "/fadsfas",
                 "search": "",
                 "state": undefined,
@@ -320,6 +310,195 @@ exports[`App component when not found page is rendered should match not found pa
               Not found page
             </div>
           </NotFound>
+        </Route>
+      </Switch>
+    </App>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`App component when search page is rendered should match search page snapshot 1`] = `
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/search",
+    ]
+  }
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/search",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/search",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <App>
+      <Switch>
+        <Route
+          component={[Function]}
+          computedMatch={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/search",
+              "url": "/search",
+            }
+          }
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/search",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          path="/search"
+        >
+          <Search
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/search",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/search",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/search",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/search",
+                "url": "/search",
+              }
+            }
+          >
+            <div>
+              <Container>
+                <Autocomplete
+                  articles={Array []}
+                  onSearchChange={[Function]}
+                  searchValue=""
+                >
+                  <Autocomplete
+                    autoHighlight={true}
+                    getItemValue={[Function]}
+                    inputProps={
+                      Object {
+                        "placeholder": "Input a search term",
+                      }
+                    }
+                    isItemSelectable={[Function]}
+                    items={Array []}
+                    menuStyle={
+                      Object {
+                        "background": "rgba(255, 255, 255, 0.9)",
+                        "borderRadius": "3px",
+                        "boxShadow": "0 2px 12px rgba(0, 0, 0, 0.1)",
+                        "fontSize": "90%",
+                        "maxHeight": "50%",
+                        "overflow": "auto",
+                        "padding": "2px 0",
+                        "position": "fixed",
+                      }
+                    }
+                    onChange={[Function]}
+                    onMenuVisibilityChange={[Function]}
+                    onSelect={[Function]}
+                    renderInput={[Function]}
+                    renderItem={[Function]}
+                    renderMenu={[Function]}
+                    selectOnBlur={false}
+                    value=""
+                    wrapperProps={Object {}}
+                    wrapperStyle={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "display": "inline-block",
+                        }
+                      }
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        aria-expanded={false}
+                        autoComplete="off"
+                        className="input-field"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Input a search term"
+                        role="combobox"
+                        value=""
+                      />
+                    </div>
+                  </Autocomplete>
+                </Autocomplete>
+              </Container>
+            </div>
+          </Search>
         </Route>
       </Switch>
     </App>
